@@ -4,6 +4,8 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public Transform ball;
+
+    public GameObject damagePrefab;
     
     private Vector3 _ballStartPosition;
 
@@ -49,4 +51,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public GameObject GetDamagePrefab()
+    {
+        return damagePrefab;
+    }
 }

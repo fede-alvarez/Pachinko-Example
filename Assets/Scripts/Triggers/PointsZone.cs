@@ -15,5 +15,16 @@ public class PointsZone : MonoBehaviour
     {
         //Debug.Log("La pelota paso por acá y le agrega: " + pointsCount.ToString());
         _gameManager.AddScore(pointsCount);
+        ShowPointsFeedback(pointsCount);
+    }
+
+    private void ShowPointsFeedback( int damage = 1 )
+    {
+        GameObject damagePrefab = _gameManager.GetDamagePrefab(); 
+        if (damagePrefab)
+        {
+            GameObject obj = Instantiate(damagePrefab, transform.position, Quaternion.identity);
+            obj.GetComponent<DamageFeedback>().damage = damage;
+        }
     }
 }
