@@ -1,16 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PointsZone : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("La pelota paso por acá");
     }
 }
