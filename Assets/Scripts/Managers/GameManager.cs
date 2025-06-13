@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public Transform ball;
 
+    public ProgressBar progressBar;
     public GameObject damagePrefab;
     
     private Vector3 _ballStartPosition;
@@ -50,6 +51,11 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
+
+    public void UpdateExperience(float exp)
+    {
+        progressBar.AddExperience(exp);
+    }
 
     public GameObject GetDamagePrefab()
     {

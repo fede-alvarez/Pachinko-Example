@@ -16,6 +16,7 @@ public class PointsZone : MonoBehaviour
         //Debug.Log("La pelota paso por acá y le agrega: " + pointsCount.ToString());
         _gameManager.AddScore(pointsCount);
         ShowPointsFeedback(pointsCount);
+        _gameManager.UpdateExperience(pointsCount);
     }
 
     private void ShowPointsFeedback( int damage = 1 )
